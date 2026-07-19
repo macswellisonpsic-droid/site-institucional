@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Recursos | Macs Wellison Silva</title>
+    
+    <!-- Fontes e Icones (Herdados do Original) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Original do Projeto -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- CSS Específico do Módulo -->
+    <link rel="stylesheet" href="css/recursos.css">
+</head>
+<body>
+
+    <!-- Header Herdado -->
+    <header class="header is-scrolled" id="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo" aria-label="Voltar para a página inicial">
+                M<span class="header__logo-accent">W</span>
+            </a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="../index.html" class="header__link">Voltar ao Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 100vh; background-color: var(--color-bg);">
+        <section class="section">
+            <div class="section__header js-reveal is-visible">
+                <h1 class="section__title">Centro de Recursos</h1>
+                <p class="section__subtitle">Ferramentas gratuitas para organização, saúde mental, autoconhecimento e desenvolvimento. Todos os dados são salvos apenas no seu próprio navegador.</p>
+            </div>
+
+            <!-- Filtro de Categorias Dinâmico -->
+            <div class="recursos-filters js-reveal is-visible" id="category-filters">
+                <!-- Preenchido via JS -->
+            </div>
+
+            <!-- Grid de Recursos -->
+            <div class="services__grid" id="recursos-grid">
+                <!-- Preenchido via JS com o padrão .service-card do site original -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Herdado -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <span class="footer__logo">Macs Wellison Silva</span>
+                <p class="footer__crp">Psicólogo Clínico e Organizacional | CRP 02/28926</p>
+            </div>
+            <div class="footer__links">
+                <a href="../index.html">Voltar ao Início</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; <span id="current-year"></span> Macs Wellison Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts do Módulo -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

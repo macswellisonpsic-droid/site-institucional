@@ -1,0 +1,114 @@
+/* =========================================================
+   RESPONSIVE LAYOUTS (Media Queries)
+   ========================================================= */
+
+/* Desktop / Laptops pequenos (< 1024px) */
+@media screen and (max-width: 1024px) {
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-md);
+    }
+
+    .hero__description {
+        margin: 0 auto var(--space-md);
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .hero__image-wrapper {
+        aspect-ratio: 16/10;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero__glass-card {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1rem;
+        width: 90%;
+        justify-content: center;
+        animation: none; /* Desliga animação de flutuar no mobile para economizar bateria/CPU */
+    }
+
+    .contact__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets (< 768px) */
+@media screen and (max-width: 768px) {
+    /* Menu Mobile Setup */
+    .header__menu-btn {
+        display: flex;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-surface);
+        flex-direction: column;
+        padding: 2rem 5%;
+        box-shadow: var(--shadow-md);
+        clip-path: circle(0% at top right);
+        transition: clip-path 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        gap: 2rem;
+    }
+
+    .header__nav.is-active {
+        clip-path: circle(150% at top right);
+    }
+
+    .header__menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    /* Transformação do Ícone Hamburger */
+    .header__menu-btn.is-active .header__hamburger {
+        opacity: 0;
+    }
+    .header__menu-btn.is-active::before {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .header__menu-btn.is-active::after {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .footer__container, .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer__disclaimer {
+        text-align: center;
+    }
+}
+
+/* Mobile Small (< 480px) */
+@media screen and (max-width: 480px) {
+    .btn {
+        width: 100%;
+    }
+    
+    .timeline::before {
+        left: 9px;
+    }
+    
+    .timeline__dot {
+        left: 1px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .timeline__content {
+        padding: 1.5rem;
+    }
+}

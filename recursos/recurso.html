@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recurso | Macs Wellison Silva</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="css/recursos.css">
+
+</head>
+<body>
+
+    <header class="header is-scrolled no-print">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                M<span class="header__logo-accent">W</span>
+            </a>
+            <nav class="header__nav">
+                <a href="index.html" class="btn btn--outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-arrow-left"></i> Voltar aos Recursos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="tool-main bg-light">
+        <div class="section tool-container js-reveal is-visible" id="export-area">
+            
+            <!-- Cabeçalho Exclusivo para o PDF (Oculto na Tela, Visível apenas na Exportação) -->
+            <div class="pdf-only-header">
+                <h2 class="pdf-logo">M<span>W</span></h2>
+                <div style="text-align: right;">
+                    <strong style="font-size: 1.2rem; color: #1e293b;">Macs Wellison Silva</strong><br>
+                    <span style="font-size: 0.95rem; color: #475569;">Psicólogo Clínico e Organizacional | CRP 02/28926</span>
+                </div>
+            </div>
+
+            <!-- Cabeçalho da Ferramenta -->
+            <div class="tool-header">
+                <div class="tool-header-content">
+                    <span class="badge" id="tool-category"><i class="fas fa-tag"></i> Categoria</span>
+                    <h1 class="section__title" id="tool-title">Carregando...</h1>
+                    <p class="section__subtitle" id="tool-desc">Preencha os campos abaixo. Seu progresso é salvo automaticamente de forma segura em seu navegador.</p>
+                </div>
+            </div>
+
+            <!-- Formulário Dinâmico em Seções -->
+            <form id="tool-form" class="tool-form"></form>
+
+        </div>
+
+<!-- Barra de Ações Fixa -->
+        <div class="tool-actions-bar no-print">
+            <div class="tool-actions-container">
+                <button type="button" class="btn btn--outline" id="btn-limpar"><i class="fas fa-trash-alt"></i> Limpar Dados</button>
+                <div style="display: flex; gap: 1rem;">
+                    <!-- Botão 1: Imprime o arquivo PREENCHIDO -->
+                    <button type="button" class="btn btn--outline" id="btn-imprimir"><i class="fas fa-print"></i> Imprimir Preenchido</button>
+                    <!-- Botão 2: Imprime o arquivo EM BRANCO -->
+                    <button type="button" class="btn btn--primary" id="btn-imprimir-branco"><i class="fas fa-file-pdf"></i> Imprimir PDF em Branco</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
